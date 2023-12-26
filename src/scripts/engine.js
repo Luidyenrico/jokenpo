@@ -23,7 +23,7 @@ const cardData = [
     {
         id: 0,
         name: "Blue Eyes White Dragon",
-        type: "Paper",
+        type: "Papel",
         img: "./src/assets/icons/dragon.png",
         WinOf: [1],
         LoseOf: [2],
@@ -31,7 +31,7 @@ const cardData = [
     {
         id: 1,
         name: "Dark Magician",
-        type: "Rock",
+        type: "Pedra",
         img: "./src/assets/icons/magician.png",
         WinOf: [2],
         LoseOf: [0],
@@ -39,7 +39,7 @@ const cardData = [
     {
         id: 2,
         name: "Exodia",
-        type: "Scissors",
+        type: "Tesoura",
         img: "./src/assets/icons/exodia.png",
         WinOf: [0],
         LoseOf: [1],
@@ -116,7 +116,7 @@ async function drawCards(cardNumbers, fieldSide) {
 function drawSelectCard(index) {
     state.cardSprite.avatar.src = cardData[index].img;
     state.cardSprite.name.innerText = cardData[index].name;
-    state.cardSprite.type.innerText = "Attribute: " + cardData[index].type;
+    state.cardSprite.type.innerText = "Atributo: " + cardData[index].type;
 }
 
 async function drawButton(text) {
@@ -137,7 +137,7 @@ async function playAudio(status) {
 }
 
 async function updateScore() {
-    state.score.scoreBox.innerText = `Win: ${state.score.playerScore} | Lose: ${state.score.computerScore}`;
+    state.score.scoreBox.innerText = `Vitorias: ${state.score.playerScore} | Derrotas: ${state.score.computerScore}`;
 }  
 function init() {
     drawCards(5, player.player1);
